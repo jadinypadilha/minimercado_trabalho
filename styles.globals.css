@@ -1,0 +1,118 @@
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+body{
+font-family: "arial";
+
+}
+
+.header-inner-content{
+
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+
+    background-color: #ffffff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px #a4a2a2;
+
+    z-index: 99;
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+
+    color: crimson;
+
+}
+
+.logo span{
+ color: rgb(212, 229, 22);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+}
+
+.Compra{
+    display: flex;
+    align-items: center;
+}
+
+.Compra img{
+    width: 70px;
+    cursor: pointer;
+}
+
+nav ul li a{
+    color: crimson;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li{
+    transform: translateY(-5px);
+
+}
+
+.Header_bordao{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
+}
+
+.Produto {
+    text-align: center; 
+    width: 250px; 
+}
+
+img {
+    display: block; 
+    margin: 0 auto; 
+}
+
+.servicos-grid {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
+}
+
+.Servico {
+    text-align: center; 
+    width: 200px; 
+}
+
+img {
+    display: block; 
+    margin: 0 auto; 
+}
+
+.valor_produto {
+    font-weight: bold; 
+}
+
