@@ -4,145 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimercado</title>
+    <link rel="stylesheet" href="styles\globals.css">
 </head>
 <body>
-    <header>
-        <h1 class="logo">Mini<span>Mercado</span></h1>
-        <nav>
-            <ul>
+    <div class="navbar">
+        <div class="header-inner-content">
+            <h1 class="logo">Mini<span>Mercado</span></h1>
+            <nav>
+             <ul>
                 <li><a href="#Hortifruti">Hortifrúti</a></li>
                 <li><a href="#Mercearia">Mercearia</a></li>
                 <li><a href="#Higiene">Higienização</a></li>
                 <li><a href="#Serviços">Serviços</a></li>
-            </ul>
-        </nav>
+             </ul>
+            </nav>
+    
         <div class="Compra">
-            <img src="sacola_botão.jpg" class="botao_menu">
+            <img src="Minimercado WEB/sacola_botão.jpg"/>
         </div>
+    </div>
         <div class="Header_bordao">
             <h2>Compras rápidas, entrega ágil, tudo com um clique!</h2>
         </div>
     </header>
-    
-    <section id="Hortifruti"> 
-        <h3>Hortifruti</h3>
-        <div>
-            <img src="alface_horti.jpg" width="250" height="320" />
-            <p>Alface</p>
-            <p>R$5,00 UN</p>
-        </div>
-        <div>
-            <img src="tomate_horti.jpg" width="250" height="320" />
-            <p>Tomate</p>
-            <p>R$4,50 KG</p>
-        </div>
-        <div>
-            <img src="batata_horti.webp" width="250" height="320" />
-            <p>Batata</p>
-            <p>R$6,00 KG</p>
-        </div>
-        <div>
-            <img src="melancia_horti.avif" width="250" height="320" />
-            <p>Melancia</p>
-            <p>R$20,00 UN</p>
-        </div>
-        <div>
-            <img src="banana_horti.jpg" width="250" height="320" />
-            <p>Banana</p>
-            <p>R$8,98 KG</p>
-        </div>
-        <div>
-            <img src="maça_horti.jpg" width="250" height="320" />
-            <p>Maçã</p>
-            <p>R$11,90 KG</p>
-        </div>
-    </section>
+    <form action="https://formsubmit.co/jadiny.silva@edu.pucrs.br" method="POST">
+        <fieldset>
+            <legend>Identificação</legend>
+            <label>Nome:</label>
+            <input name="Nome" placeholder="Digite seu nome" minlength="3" required autofocus/>
+            <label>E-mail:</label>
+            <input type="email" name="email"placeholder="Digite o E-mail" required autofocus/>
+            <label>Telefone:</label>
+<input type="tel" name="Telefone" placeholder="1234567890" pattern="[0-9]{11}" required autofocus /><br><br>
+<p>Sexo
+            <select name="Sexo">
+                <option value="feminino">feminino</option>
+                <option value="masculino">masculino</option>
+            </p>
+            </select>
+            <label>CPF:</label>
+            <input name="CPF" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required autofocus />
+            <label>Endereço:</label>
+            <input name="Endereço" placeholder="Digite o endereço completo" minlength="14" required autofocus />
+            <label>Crie uma senha:</label>
+            <input type="password" name="Senha" minlength="6" placeholder="Mínimo de 6 caracteres" required autofocus />  
+            <input type="submit" autofocus />
+        </fieldset>
 
-    <section id="Mercearia">
-        <h3>Mercearia</h3>
-        <div>
-            <img src="acucar_mercearia.jpeg" width="250" height="320" />
-            <p>Açúcar</p>
-            <p>R$2,99 KG</p>
-        </div>
-        <div>
-            <img src="arroz_mercearia.jpg" width="250" height="320" />
-            <p>Arroz</p>
-            <p>R$5,90 KG</p>
-        </div>
-        <div>
-            <img src="Feijao_mercearia.webp" width="250" height="320" />
-            <p>Feijão</p>
-            <p>R$8,90 KG</p>
-        </div>
-        <div>
-            <img src="massa_naopereciveis.jpeg" width="250" height="320" />
-            <p>Massa</p>
-            <p>R$3,15 UN</p>
-        </div>            
-        <div>
-            <img src="café_naopereciveis.png" width="250" height="320" />
-            <p>Café</p>
-            <p>R$14,98 UN</p>
-        </div>
-        <div>
-            <img src="leiteempó_naopereciveis.jpg" width="250" height="320" />
-            <p>Leite em Pó</p>
-            <p>R$10,90 UN</p>
-        </div>
-    </section>
+        <main>
+            <div class="Produtos">
+                <h3 class="title_secao">Produtos selecionados</h3>
+                <h3>Hortifruti</h3><br>
+                <div class="subtitle_underline"></div>
+                <section id="Hortifruti" class="produtos-grid">
+                    <!-- Produto 1 -->
+                    <div class="Produto">
+                        <img src="Minimercado WEB/alface_horti.jpg" width="250" height="320" />
+                        <p class="nome_produto">Alface</p>
+                        <p class="valor_produto">R$5,00 UN</p>
+                    </div>
+        
+                    <!-- Produto 2 -->
+                    <div class="Produto">
+                        <img src="Minimercado WEB/tomate_horti.jpg" width="250" height="320" />
+                        <p class="nome_produto">Tomate</p>
+                        <p class="valor_produto">R$4,50 KG</p>
+                    </div>
+        
+                    <!-- Produto 3 -->
+                    <div class="Produto">
+                        <img src="Minimercado WEB/batata_horti.webp" width="250" height="320" />
+                        <p class="nome_produto">Batata</p>
+                        <p class="valor_produto">R$6,00 KG</p>
+                    </div>
+        
+                    <!-- Produto 4 -->
+                    <div class="Produto">
+                        <img src="Minimercado WEB/melancia_horti.avif" width="250" height="320" />
+                        <p class="nome_produto">Melancia</p>
+                        <p class="valor_produto">R$20,00 UN</p>
+                    </div>
+        
+                    <!-- Produto 5 -->
+                    <div class="Produto">
+                        <img src="Minimercado WEB/banana_horti.jpg" width="250" height="320" />
+                        <p class="nome_produto">Banana</p>
+                        <p class="valor_produto">R$8,98 KG</p>
+                    </div>
+        
+                    <!-- Produto 6 -->
+                    <div class="Produto">
+                        <img src="Minimercado WEB/maça_horti.jpg" width="250" height="320" />
+                        <p class="nome_produto">Maçã</p>
+                        <p class="valor_produto">R$11,90 KG</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <main>
+            <!-- Seção Mercearia -->
+            <section id="Mercearia">
+                <h3>Mercearia</h3><br>
+                <div class="produtos-grid">
+                    <div class="Produto">
+                        <img src="Minimercado WEB/acucar_mercearia.jpeg" width="250" height="320" />
+                        <p>Açúcar</p>
+                        <p class="valor_produto">R$2,99 KG</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/arroz_mercearia.jpg" width="250" height="320" />
+                        <p>Arroz</p>
+                        <p class="valor_produto">R$5,90 KG</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/Feijao_mercearia.webp" width="250" height="320" />
+                        <p>Feijão</p>
+                        <p class="valor_produto">R$8,90 KG</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/massa_naopereciveis.jpeg" width="250" height="320" />
+                        <p>Massa</p>
+                        <p class="valor_produto">R$3,15 UN</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/café_naopereciveis.png" width="250" height="320" />
+                        <p>Café</p>
+                        <p class="valor_produto">R$14,98 UN</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/leiteempó_naopereciveis.jpg" width="250" height="320" />
+                        <p>Leite em Pó</p>
+                        <p class="valor_produto">R$10,90 UN</p>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Seção Higiene -->
+            <section id="Higiene">
+                <h3>Higiene</h3>
+                <div class="produtos-grid">
+                    <div class="Produto">
+                        <img src="Minimercado WEB/shampoo_higiene.avif" width="250" height="320" />
+                        <p>Shampoo</p>
+                        <p class="valor_produto">R$12,00 UN</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/sabonete_higiene.webp" width="250" height="320" />
+                        <p>Sabonete</p>
+                        <p class="valor_produto">R$1,50 UN</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/papelhigienico_higiene.jpeg" width="250" height="320" />
+                        <p>Papel Higiênico</p>
+                        <p class="valor_produto">R$4,00 UN</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/ajax_limpeza.jpg" width="250" height="320" />
+                        <p>Ajax Limpeza</p>
+                        <p class="valor_produto">R$7,00 UN</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/aguasanitaria_limpeza.webp" width="250" height="320" />
+                        <p>Água Sanitária</p>
+                        <p  class="valor_produto">R$3,20 UN</p>
+                    </div>
+                    <div class="Produto">
+                        <img src="Minimercado WEB/detergente_limpeza.webp" width="250" height="320" />
+                        <p>Detergente</p>
+                        <p class="valor_produto">R$2,00 UN</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
 
-    <section id="Higiene">
-        <h3>Higiene</h3>
-        <div>
-            <img src="shampoo_higiene.avif" width="250" height="320" />
-            <p>Shampoo</p>
-            <p>R$12,00 UN</p>
-        </div>
-        <div>
-            <img src="sabonete_higiene.webp" width="250" height="320" />
-            <p>Sabonete</p>
-            <p>R$1,50 UN</p>
-        </div>
-        <div>
-            <img src="papelhigienico_higiene.jpeg" width="250" height="320" />
-            <p>Papel Higiênico</p>
-            <p>R$4,00 UN</p>
-        </div>
-        <div>
-            <img src="ajax_limpeza.jpg" width="250" height="320" />
-            <p>Ajax Limpeza</p>
-            <p>R$7,00 UN</p>
-        </div>
-        <div>
-            <img src="aguasanitaria_limpeza.webp" width="250" height="320" />
-            <p>Água Sanitária</p>
-            <p>R$3,20 UN</p>
-        </div>
-        <div>
-            <img src="detergente_limpeza.webp" width="250" height="320" />
-            <p>Detergente</p>
-            <p>R$2,00 UN</p>
-        </div>
-    </section>
-
-    <section id="Serviços">
-        <h3>Serviços</h3>
-        <div>
-            <img src="Entrega.jpg" width="150" height="220" />
-            <p>Entrega</p>
-            <p>R$10,00</p>
-        </div>
-        <div>
-            <img src="retirada.png" width="150" height="200" />
-            <p>Retirada</p>
-            <p>Grátis</p>
-        </div>
-    </section>
+        <section id="Serviços">
+            <h3>Serviços</h3><br>
+            <div class="servicos-grid">
+                <!-- Serviço 1 -->
+                <div class="Servico">
+                    <img src="Minimercado WEB/Entrega.jpg" width="150" height="220" />
+                    <p>Entrega</p>
+                    <p class="valor_produto">R$10,00</p>
+                </div>
+                <!-- Serviço 2 -->
+                <div class="Servico">
+                    <img src="Minimercado WEB/retirada.png" width="150" height="200" />
+                    <p>Retirada</p>
+                    <p class="valor_produto">Grátis</p>
+                </div>
+            </div>
+        </section>
+        
     <footer>
-        <h4>Da autoria de: Jadiny Andressa</h4>
-        <p>Em parceria com: <a href="https://www.pucrs.br/?p">PUCRS</a></p>
-        <a href="mailto:jadiny.andressa@gmail.com?subject=Erro encontrado">Em caso de erro, entre em contato por E-mail</a>
+<H4>Da autoria de: Jadiny Andressa</H4>
+<p>Em parceria com: <a href="https://www.pucrs.br/?p">PUCRS</a></p>
+<a href="mailto:jadiny.andressa@gmail.com?subjetc=Erro encontrado"> Em caso de erro, entre em contato por E-mail</a>
     </footer>
+    
 </body>
 </html>
