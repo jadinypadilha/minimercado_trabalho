@@ -75,7 +75,7 @@ nav ul li{
     display: flex;
     align-items: center;
     justify-self: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .produtos-grid {
@@ -83,6 +83,11 @@ nav ul li{
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px; 
     justify-items: center; 
+}
+
+.produtos-grid>*{
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .Produto {
@@ -116,3 +121,97 @@ img {
     font-weight: bold; 
 }
 
+.gray_background{
+    background-color: grey;
+}
+
+
+/* Ajuste para o carrossel */
+#carouselPromocoes {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 400px; /* Defina a altura desejada para o carrossel */
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; 
+    top: 15%; 
+    transform: translateY(-15%); 
+    width: 5%; 
+    z-index: 1050; 
+    color: red;
+}
+
+.carousel-control-prev {
+    left: 400px; 
+    color: red;
+}
+
+.carousel-control-next {
+    right: 400px;
+    color: red; 
+}
+
+
+.carousel-inner {
+    position: relative; 
+}
+
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: rgb(44, 180, 105);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+
+.center h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: crimson;
+}
+
+.center p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.centered-text {
+    text-align: center;
+}

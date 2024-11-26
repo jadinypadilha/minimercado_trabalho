@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimercado</title>
     <link rel="stylesheet" href="styles.globals.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
     <div class="navbar">
         <div class="header-inner-content">
             <h1 class="logo">Mini<span>Mercado</span></h1>
@@ -20,7 +28,7 @@
             </nav>
     
         <div class="Compra">
-            <img src="sacola_botão.jpg"/>
+            <img src="sacola_botão.jpg" alt="Imagem do botão de compras" />
         </div>
     </div>
         <div class="Header_bordao">
@@ -35,21 +43,74 @@
             <label>E-mail:</label>
             <input type="email" name="email"placeholder="Digite o E-mail" required autofocus/>
             <label>Telefone:</label>
-<input type="tel" name="Telefone" placeholder="1234567890" pattern="[0-9]{11}" required autofocus /><br><br>
-<p>Sexo
+            <input type="tel" name="Telefone" placeholder="1234567890" pattern="[0-9]{11}" required autofocus />
+            <p>Sexo
             <select name="Sexo">
                 <option value="feminino">feminino</option>
                 <option value="masculino">masculino</option>
             </p>
             </select>
-            <label>CPF:</label>
+            <br><label>CPF:</label>
             <input name="CPF" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required autofocus />
             <label>Endereço:</label>
             <input name="Endereço" placeholder="Digite o endereço completo" minlength="14" required autofocus />
+            <label>Data da entrega/retirada:</label>
+            <input type="date" name="dataentregaouretirada"/> 
             <label>Crie uma senha:</label>
             <input type="password" name="Senha" minlength="6" placeholder="Mínimo de 6 caracteres" required autofocus />  
             <input type="submit" autofocus />
         </fieldset>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var myCarousel = document.querySelector('#carouselPromocoes');
+                var carousel = new bootstrap.Carousel(myCarousel);
+            });
+        </script>
+        
+       <!-- Carrossel de Promoções -->
+<div id="carouselPromocoes" class="carousel slide my-5" data-bs-ride="carousel">
+    <center>
+        <h1>Promoções Imperdíveis!</h1>
+        <p>5% OFF nos produtos selecionados</p>
+    </center>
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="acucar_mercearia.jpeg" alt="Promoção de Açúcar - R$2,99/KG">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Açúcar</h5>
+                <p>5% OFF! Agora por apenas R$2,84/KG.</p>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img class="d-block w-100" src="aguasanitaria_limpeza.webp" alt="Promoção de Água Sanitária - R$3,20/UN">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Água Sanitária</h5>
+                <p>5% OFF! Agora por apenas R$3,04/UN.</p>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <img class="d-block w-100" src="café_naopereciveis.png" alt="Promoção de Café - R$14,98/UN">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Café</h5>
+                <p>5% OFF! Agora por apenas R$14,23/UN.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Botão anterior -->
+    <a class="carousel-control-prev" href="#carouselPromocoes" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </a>
+    <!-- Botão próximo -->
+    <a class="carousel-control-next" href="#carouselPromocoes" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+    </a>
+</div>
 
         <main>
             <div class="Produtos">
@@ -59,42 +120,42 @@
                 <section id="Hortifruti" class="produtos-grid">
                     <!-- Produto 1 -->
                     <div class="Produto">
-                        <img src="alface_horti.jpg" width="250" height="320" />
+                        <img src="alface_horti.jpg" width="250" height="320" alt="Alface fresca disponível por R$5,00 UN" />
                         <p class="nome_produto">Alface</p>
                         <p class="valor_produto">R$5,00 UN</p>
                     </div>
         
                     <!-- Produto 2 -->
                     <div class="Produto">
-                        <img src="tomate_horti.jpg" width="250" height="320" />
+                        <img src="tomate_horti.jpg" width="250" height="320" alt="Tomates frescos disponíveis por R$4,50 KG" />
                         <p class="nome_produto">Tomate</p>
                         <p class="valor_produto">R$4,50 KG</p>
                     </div>
         
                     <!-- Produto 3 -->
                     <div class="Produto">
-                        <img src="batata_horti.webp" width="250" height="320" />
+                        <img src="batata_horti.webp" width="250" height="320" alt="Batatas frescas disponíveis por R$6,00 KG" />
                         <p class="nome_produto">Batata</p>
                         <p class="valor_produto">R$6,00 KG</p>
                     </div>
         
                     <!-- Produto 4 -->
                     <div class="Produto">
-                        <img src="melancia_horti.avif" width="250" height="320" />
+                        <img src="melancia_horti.avif" width="250" height="320" alt="Melancia suculenta disponível por R$20,00 UN" />
                         <p class="nome_produto">Melancia</p>
                         <p class="valor_produto">R$20,00 UN</p>
                     </div>
         
                     <!-- Produto 5 -->
                     <div class="Produto">
-                        <img src="banana_horti.jpg" width="250" height="320" />
+                        <img src="banana_horti.jpg" width="250" height="320" alt="Bananas frescas disponíveis por R$8,98 KG" />
                         <p class="nome_produto">Banana</p>
                         <p class="valor_produto">R$8,98 KG</p>
                     </div>
         
                     <!-- Produto 6 -->
                     <div class="Produto">
-                        <img src="maça_horti.jpg" width="250" height="320" />
+                        <img src="maça_horti.jpg" width="250" height="320" alt="Maçãs frescas disponíveis por R$11,90 KG" />
                         <p class="nome_produto">Maçã</p>
                         <p class="valor_produto">R$11,90 KG</p>
                     </div>
@@ -108,32 +169,32 @@
                 <h3>Mercearia</h3><br>
                 <div class="produtos-grid">
                     <div class="Produto">
-                        <img src="acucar_mercearia.jpeg" width="250" height="320" />
+                        <img src="acucar_mercearia.jpeg" width="250" height="320" alt="Açúcar disponível por R$2,99 KG" />
                         <p>Açúcar</p>
                         <p class="valor_produto">R$2,99 KG</p>
                     </div>
                     <div class="Produto">
-                        <img src="arroz_mercearia.jpg" width="250" height="320" />
+                        <img src="arroz_mercearia.jpg" width="250" height="320" alt="Arroz disponível por R$5,90 KG" />
                         <p>Arroz</p>
                         <p class="valor_produto">R$5,90 KG</p>
                     </div>
                     <div class="Produto">
-                        <img src="Feijao_mercearia.webp" width="250" height="320" />
+                        <img src="Feijao_mercearia.webp" width="250" height="320" alt="Feijão disponível por R$8,90 KG" />
                         <p>Feijão</p>
                         <p class="valor_produto">R$8,90 KG</p>
                     </div>
                     <div class="Produto">
-                        <img src="massa_naopereciveis.jpeg" width="250" height="320" />
+                        <img src="massa_naopereciveis.jpeg" width="250" height="320" alt="Massa disponível por R$3,15 UN" />
                         <p>Massa</p>
                         <p class="valor_produto">R$3,15 UN</p>
                     </div>
                     <div class="Produto">
-                        <img src="café_naopereciveis.png" width="250" height="320" />
+                        <img src="café_naopereciveis.png" width="250" height="320" alt="Café disponível por R$14,98 UN" />
                         <p>Café</p>
                         <p class="valor_produto">R$14,98 UN</p>
                     </div>
                     <div class="Produto">
-                        <img src="leiteempó_naopereciveis.jpg" width="250" height="320" />
+                        <img src="leiteempó_naopereciveis.jpg" width="250" height="320" alt="Leite em pó disponível por R$10,90 UN" />
                         <p>Leite em Pó</p>
                         <p class="valor_produto">R$10,90 UN</p>
                     </div>
@@ -145,32 +206,32 @@
                 <h3>Higiene</h3>
                 <div class="produtos-grid">
                     <div class="Produto">
-                        <img src="shampoo_higiene.avif" width="250" height="320" />
+                        <img src="shampoo_higiene.avif" width="250" height="320" alt="Shampoo disponível por R$12,00 UN" />
                         <p>Shampoo</p>
                         <p class="valor_produto">R$12,00 UN</p>
                     </div>
                     <div class="Produto">
-                        <img src="sabonete_higiene.webp" width="250" height="320" />
+                        <img src="sabonete_higiene.webp" width="250" height="320" alt="Sabonete disponível por R$1,50 UN" />
                         <p>Sabonete</p>
                         <p class="valor_produto">R$1,50 UN</p>
                     </div>
                     <div class="Produto">
-                        <img src="papelhigienico_higiene.jpeg" width="250" height="320" />
+                        <img src="papelhigienico_higiene.jpeg" width="250" height="320" alt="Papel Higiênico disponível por R$4,00 UN" />
                         <p>Papel Higiênico</p>
                         <p class="valor_produto">R$4,00 UN</p>
                     </div>
                     <div class="Produto">
-                        <img src="ajax_limpeza.jpg" width="250" height="320" />
+                        <img src="ajax_limpeza.jpg" width="250" height="320" alt="Ajax Limpeza disponível por R$7,00 UN" />
                         <p>Ajax Limpeza</p>
                         <p class="valor_produto">R$7,00 UN</p>
                     </div>
                     <div class="Produto">
-                        <img src="aguasanitaria_limpeza.webp" width="250" height="320" />
+                        <img src="aguasanitaria_limpeza.webp" width="250" height="320" alt="Água Sanitária disponível por R$3,20 UN" />
                         <p>Água Sanitária</p>
                         <p  class="valor_produto">R$3,20 UN</p>
                     </div>
                     <div class="Produto">
-                        <img src="detergente_limpeza.webp" width="250" height="320" />
+                        <img src="detergente_limpeza.webp" width="250" height="320" alt="Detergente disponível por R$2,00 UN" />
                         <p>Detergente</p>
                         <p class="valor_produto">R$2,00 UN</p>
                     </div>
@@ -184,24 +245,28 @@
             <div class="servicos-grid">
                 <!-- Serviço 1 -->
                 <div class="Servico">
-                    <img src="Entrega.jpg" width="150" height="220" />
+                    <img src="Entrega.jpg" width="150" height="220" alt="Serviço de entrega disponível por R$10,00" />
                     <p>Entrega</p>
                     <p class="valor_produto">R$10,00</p>
                 </div>
                 <!-- Serviço 2 -->
                 <div class="Servico">
-                    <img src="retirada.png" width="150" height="200" />
+                    <img src="retirada.png" width="150" height="200" alt="Serviço de retirada grátis" />
                     <p>Retirada</p>
                     <p class="valor_produto">Grátis</p>
                 </div>
             </div>
         </section>
-        
+    <div>
+        <div class="gray_background">
+            <div class="rodape">
     <footer>
 <H4>Da autoria de: Jadiny Andressa</H4>
 <p>Em parceria com: <a href="https://www.pucrs.br/?p">PUCRS</a></p>
 <a href="mailto:jadiny.andressa@gmail.com?subjetc=Erro encontrado"> Em caso de erro, entre em contato por E-mail</a>
     </footer>
-    
+</div>
+</div>
+</div>
 </body>
 </html>
